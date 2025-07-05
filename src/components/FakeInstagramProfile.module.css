@@ -1,0 +1,38 @@
+.container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* This is the link that will have the glass effect */
+.profileLink {
+  display: block;
+  border-radius: 16px;
+  padding: 1rem; /* The "glass" border thickness */
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  overflow: hidden; /* Ensures the image corners are rounded */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileLink:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* The actual image inside the link */
+.profileImage {
+  width: 100%;
+  display: block;
+  border-radius: 8px; /* Slightly smaller radius than the container */
+}

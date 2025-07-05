@@ -1,0 +1,73 @@
+.checkerContainer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 1rem;
+}
+
+.emailInput {
+  flex-grow: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  text-align: right;
+}
+
+.emailInput:focus {
+  border-color: var(--glass-border);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.checkButton {
+  padding: 0.85rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.checkButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.checkButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* On screens larger than a mobile phone */
+@media (min-width: 640px) {
+  .checkerContainer {
+    padding: 2.5rem;
+  }
+  .inputGroup {
+    flex-direction: row; /* Side-by-side on larger screens */
+  }
+}
