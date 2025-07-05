@@ -18,7 +18,7 @@ const PwnedChecker = () => {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/check-pwned', {
+      const response = await fetch('/api/check-pwned', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
